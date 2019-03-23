@@ -1,5 +1,5 @@
 # senate-committees
-Simple scraping for updating the Romanian Senate Permanent Committees composition.
+A simple scrapper for updating the Romanian Senate Permanent Committees composition.
 ## Introduction
 This is a training project. I'm working for a senator and he wanted this integrated information on the Permanent Committees composition. Thought anyone could retry those data navigating the Senate page, the scraping offer the possibility to update any changes in the resulting file quicker. 
 The CSV file that contains the scraping result keeps the hierarchical order, the Committee bord will be displayed first: President, Vice-president, Secretary - then the committee members. 
