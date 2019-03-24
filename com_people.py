@@ -842,6 +842,70 @@ td = table.find('a', target="_blank")
 sanatate.append(td.text.strip())
 
 
+"""Comisia pentru cultură şi media"""
+page = requests.get('https://www.senat.ro/ComponentaComisii.aspx?Zi=&ComisieID=47a390a9-689e-46fd-85a3-5dd1c5ad8f0a')
+# extract the content
+page = page.text
+# create a soup object
+soup = BeautifulSoup(page, 'lxml')
+
+cult = ['Comisia pentru cultură şi media']
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl02_ListViewMembri_ctrl0_ctl01_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl03_ListViewMembri_ctrl0_ctl01_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl04_ListViewMembri_ctrl0_ctl01_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+    
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl0_ctl01_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl0_ctl03_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl0_ctl05_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl0_ctl07_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl1_ctl01_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl1_ctl03_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl1_ctl05_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
+table = soup.find('td', id="ctl00_B_Center_GridViewMembri_ctl05_ListViewMembri_ctrl1_ctl07_Td1")
+td = table.find('a', target="_blank")
+cult.append(td.text.strip())
+
+
 """Comisia pentru transporturi şi infrastructură"""
 page = requests.get('https://www.senat.ro/ComponentaComisii.aspx?Zi=&ComisieID=13BC9365-960B-40CA-8186-7B8FED65F20B')
 # extract the content
@@ -1358,6 +1422,9 @@ item.update(com_educ)
 
 com_sanatate = {sanatate[0]:sanatate[1:] for x in sanatate}
 item.update(com_sanatate)
+
+com_cult = {cult[0]:cult[1:] for x in cult}
+item.update(com_cult)
 
 com_trans = {trans[0]:trans[1:] for x in trans}
 item.update(com_trans)
