@@ -9,7 +9,7 @@ Requests 2.21\
 BeautifulSoup 4.6.3\
 Pandas 0.23.4
 ## Launch
-I use Spyder and the libries are via Anaconda.
+I use Spyder and the libraries are via Anaconda.
 ### Status
 I scheduled a task to run the script daily. 
 Right now the CSV file is in my computer. Because it should be available and handy for his user I put the file on Drive and sync it with my computer. It didn'n work though. 
